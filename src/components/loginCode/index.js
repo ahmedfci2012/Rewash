@@ -61,6 +61,7 @@ export default function Code ({navigation}){
     return () => clearInterval(timerId);
   }, [secs, mins])  
        
+ 
 return (
 
 
@@ -94,7 +95,7 @@ return (
          
  <View style={{
      alignItems:'center',
-     marginTop:44,
+     marginTop:height*.05425,
      paddingLeft:30
  }}>
          <Text style={{
@@ -118,7 +119,7 @@ return (
     flex:1,
     flexDirection:'row',
     justifyContent:'space-around',
-    marginTop:64,
+    marginTop:height*.07925,
     paddingLeft:20,
     paddingRight:20
 }}>
@@ -127,8 +128,8 @@ return (
 <View style={{
         borderRadius:10,
         backgroundColor:'#FFF',
-        width:67,
-        height:70
+        width:width*.183333,
+        height:height*.086313
 
 }}>
    
@@ -157,8 +158,8 @@ return (
   <View style={{
         borderRadius:10,
         backgroundColor:'#FFF',
-        width:67,
-        height:70
+        width:width*.183333,
+        height:height*.086313
 
 }}>
    
@@ -188,8 +189,8 @@ return (
   <View style={{
         borderRadius:10,
         backgroundColor:'#FFF',
-        width:67,
-        height:70
+        width:width*.183333,
+        height:height*.086313
 
 }}>
    
@@ -216,8 +217,8 @@ return (
   <View style={{
         borderRadius:10,
         backgroundColor:'#FFF',
-        width:67,
-        height:70
+        width:width*.183333,
+        height:height*.08631319358
 
 }}>
    

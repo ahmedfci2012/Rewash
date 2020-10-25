@@ -110,17 +110,18 @@ export default function MyInformation (){
                     iosHeader="اختيار الدولة "
                    // iosIcon={<Icon name="arrow-down" />}
                     style={{ 
-                      height:25,
-                      marginRight:-40,
+                      flex:1,
+                      height:25, 
                       marginTop:-10,
+                      marginRight: (height >= 630 && height<=650)?-8:-40,
+                      backgroundColor:'transparent'
                    }}
                     selectedValue={""}
-                    onValueChange={(value)=>this.onValueChange(value)}
+                    //onValueChange={(value)=>this.onValueChange(value)}
                   >
                       
                     <Picker.Item label="السعودية(+966)" value="id0"/>
-                    <Picker.Item label="السعودية " value="id0" />
-                    <Picker.Item label=" السعودية " value="id0" />
+                    <Picker.Item label="مصر(+20)" value="id1" />
                     
                    
       
@@ -138,8 +139,8 @@ export default function MyInformation (){
       }}>
          
           <Input
-                  placeholder=" رقم التليفون"
-                  value="0501234567"
+                  placeholder="0501234567"
+                  //value="0501234567"
                   // onChangeText={this.changeField("productName")}
                   placeholderTextColor="#999999"
                   autoCorrect={true}
@@ -150,7 +151,7 @@ export default function MyInformation (){
                     height: 44,
                     //color: "#999999",
                     //fontSize: 18,
-                    paddingRight: 16,
+                    paddingRight: 14,
                     //fontWeight:'400',
                     fontFamily:'DinNextRegular'
                   }}

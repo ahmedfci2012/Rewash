@@ -8,7 +8,7 @@ const { width, height } = Dimensions.get("window");
 export default function Login ({navigation}){
    
    
-
+console.log(height);
 return (
 
 
@@ -66,12 +66,12 @@ return (
           width:width*.80
         }}>
             <View style={{ flexDirection:'row',  }}>
-                    <View style={{  marginLeft:10, height:30}}>
+                    <View style={{   height:30}}>
                        <Icon name="keyboard-arrow-down" type="MaterialIcons"  style={{
                            marginTop:10 , color:'#02496B'
                      }}/>
                    </View> 
-                    <View style={{ flex:1 ,   justifyContent:'flex-start', marginRight:15}}>
+                    <View style={{ flex:1 , justifyContent:'flex-start', marginRight:15}}>
                         <Text style={{fontFamily:'DinNextRegular'}}>الدولة/المنطقة</Text>
                     </View> 
 
@@ -81,14 +81,16 @@ return (
      <Picker
               iosHeader="اختيار الدولة "
              // iosIcon={<Icon name="arrow-down" />}
-              style={{ 
-                height:25,
-                marginRight:-40,
+              style={{
+                flex:1,
+                height:25, 
                 marginTop:-10,
+                marginRight: (height >= 630 && height<=650)?-8:-40,
                 fontFamily:'DinNextRegular',
+                backgroundColor:'transparent'
              }}
               selectedValue={""}
-              onValueChange={(value)=>this.onValueChange(value)}
+              //onValueChange={(value)=>this.onValueChange(value)}
 
               itemStyle={{
                 fontFamily:'DinNextRegular'
@@ -108,8 +110,7 @@ return (
               }}
 
               />
-              <Picker.Item label="السعودية " value="id0" />
-              <Picker.Item label=" السعودية " value="id0" />
+              <Picker.Item label="مصر(+20)" value="id1" />
               
              
 
@@ -128,8 +129,8 @@ return (
 }}>
    
     <Input
-            placeholder=" رقم التليفون"
-            value="0501234567"
+            placeholder="0501234567"
+            //value="0501234567"
             // onChangeText={this.changeField("productName")}
             placeholderTextColor="#999999"
             autoCorrect={true}

@@ -43,7 +43,7 @@ return (
 
          
  <View style={{
-     marginTop:26,
+     marginTop:20,
      paddingRight:50
  }}>
          <Text style={{
@@ -61,7 +61,7 @@ return (
 <View style={{
     flex:1,
     alignItems:'center',
-    marginTop:height*.15043,
+    marginTop:height*.10043,
 }}> 
       <ImageBackground
         source={require('../assets/Rectangle.png')}
@@ -104,9 +104,10 @@ return (
 </View>
 
 <View style={{
-  padding :30
+  paddingTop :30,
+  paddingRight:30,
+  paddingLeft:30
 }}>
-     
 <FieldSet 
     label="الاسم الاول" 
     labelPosition="end" 
@@ -128,7 +129,6 @@ return (
           }}
         />
 </FieldSet>
-
 <FieldSet 
     label="الاسم الاخير" 
     labelPosition="end" 
@@ -156,6 +156,7 @@ return (
 
 <TouchableOpacity onPress={()=>navigation.navigate("MyAccount")}>
                 <View style={{
+                        marginBottom:30,
                         height:48,
                         width:width*.80,
                         marginLeft:width*.10,

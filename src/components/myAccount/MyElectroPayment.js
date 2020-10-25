@@ -75,19 +75,20 @@ export default function MyElectroPayment (){
        </View>
 
 
-      <View style={{ flexDirection:'row', alignItems:'center'}}>
+      <View style={{ flexDirection:'row', alignItems:'center', }}>
 
-            <View style={{flexDirection:'row', justifyContent:'flex-start', marginRight:20}}>
+            <View style={{flex:1, flexDirection:'row', justifyContent:'center' }}>
                 <View>
                   <Icon name="plussquareo" type="AntDesign" style={{color:'#200E32', textAlign:'center'}}  />
                   <Text style={{color:'#200E32', fontFamily:'DinNextRegular', fontSize:11,textAlign:'center'}}> بطاقة جديدة</Text>
               </View>
             </View>
 
-            <View style={{  }}>
+            <View style={{ flex:3 , }}>
               <Image
                 source={require('../assets/Card2.png')}
-                 style={{width:221, height:159 }}
+                 style={{width:width*.690625, height:height*.196054}}
+                 resizeMode='contain'
               />
             </View>
 
