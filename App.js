@@ -13,6 +13,7 @@ import Login  from './src/components/login';
 import Code  from './src/components/loginCode';
 import Inputs  from './src/components/loginInputs';
 import MyAccount  from './src/components/myAccount';
+import AddCard from './src/components/newcard';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,17 @@ return (
         <NavigationContainer>
             <Stack.Navigator>
             
+            <Stack.Screen name="AddCard" component={AddCard} 
+              options={{
+                headerShown:false
+              }}
+              /> 
+            <Stack.Screen name="MyAccount" component={MyAccount} 
+              options={{
+                headerShown:false
+              }}
+              /> 
+              
             <Stack.Screen name="Login" component={Login} 
               options={{
                 headerShown:false
@@ -42,11 +54,7 @@ return (
               />
              
               
-             <Stack.Screen name="MyAccount" component={MyAccount} 
-              options={{
-                headerShown:false
-              }}
-              /> 
+            
 
            
               

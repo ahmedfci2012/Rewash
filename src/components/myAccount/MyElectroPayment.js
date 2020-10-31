@@ -5,7 +5,7 @@ import { Image, StyleSheet } from 'react-native';
 import FieldSet from 'react-native-fieldset';
 
 const { width, height } = Dimensions.get("window");
-export default function MyElectroPayment (){
+export default function MyElectroPayment ({navigation}){
 
     return (
       <View style={{
@@ -77,13 +77,14 @@ export default function MyElectroPayment (){
 
       <View style={{ flexDirection:'row', alignItems:'center', }}>
 
-            <View style={{flex:1, flexDirection:'row', justifyContent:'center' }}>
-                <View>
-                  <Icon name="plussquareo" type="AntDesign" style={{color:'#200E32', textAlign:'center'}}  />
-                  <Text style={{color:'#200E32', fontFamily:'DinNextRegular', fontSize:11,textAlign:'center'}}> بطاقة جديدة</Text>
+            <TouchableOpacity style={{ flex:1, flexDirection:'row', justifyContent:'center'}} onPress={()=>navigation.navigate("AddCard")}>
+              <View style={{flex:1, flexDirection:'row', justifyContent:'center' }}>
+                  <View>
+                    <Icon name="plussquareo" type="AntDesign" style={{color:'#200E32', textAlign:'center'}}  />
+                    <Text style={{color:'#200E32', fontFamily:'DinNextRegular', fontSize:11,textAlign:'center'}}> بطاقة جديدة</Text>
+                </View>
               </View>
-            </View>
-
+            </TouchableOpacity>
             <View style={{ flex:3 , }}>
               <Image
                 source={require('../assets/Card2.png')}

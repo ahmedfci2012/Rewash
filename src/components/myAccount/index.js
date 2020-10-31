@@ -7,17 +7,18 @@ import Headers from './Headers';
 import Profile from './Profile';
 import MyInformation from './MyInformation';
 import MyElectroPayment from './MyElectroPayment';
+import MySetings from './MySetings';
+
 
 import Footers from './Footers';
 
 const { width, height } = Dimensions.get("window");
-export default function MyAccount (){
+export default function MyAccount ({navigation}){
    
     
 const [ myInfo, setMyInfo ]= useState(true); 
 const [ mySeting, setMySeting ]= useState(false);
 const [ myPayment, setMyPayment ]= useState(false);
-
        
 return (
 
@@ -108,8 +109,8 @@ return (
 
 
 {myInfo? <MyInformation/>:null}
-{myPayment? <MyElectroPayment/>:null}
-
+{myPayment? <MyElectroPayment navigation={navigation} />:null}
+{mySeting?<MySetings />:null}
 
 </Content>
 
@@ -121,35 +122,3 @@ return (
 );
 }
 
-/**
-
-<View style={{
-                height:80,
-                width:80,
-                marginLeft:width*.38,
-                borderRadius:40,
-                backgroundColor:'#E5E5E5',
-                justifyContent:'center',
-                marginBottom:-40,
-                zIndex:5
-                }}>
-
-            <View style={{
-                height:40,
-                width:40,
-                borderRadius:20,
-                backgroundColor:'red',
-                alignSelf:'center',
-                 
-                }}>
-                    
-           </View>
-
-           </View>
-           <View style={{
-                height:80,
-                backgroundColor:'red'
-                }}>
-           </View>
- 
- */
